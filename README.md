@@ -1,1 +1,1 @@
-#configuration-files
+#dotfiles
