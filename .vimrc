@@ -66,3 +66,33 @@ nnoremap <silent><C-a> :NERDTreeFocus<CR>
 
 " 起動時にNERDTreeTabsを使ってNERDTreeを開く
 let g:nerdtree_tabs_open_on_console_startup = 1
+
+" unite.vimの設定
+noremap <C-U><C-F> :Unite -buffer-name=file file<CR> " ファイル一覧
+noremap <C-U><C-R> :Unite file_mru<CR> " 最近使ったファイル一覧
+
+au FileType unite nnoremap <silent> <buffer> <expr> <C-i> unite#do_action('split') " ウィンドウを分割して開く
+au FileType unite inoremap <silent> <buffer> <expr> <C-i> unite#do_action('split')
+
+" ESCキーを2回押すと終了する
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+
+""" airline系 """
+" Powerline系フォントを利用する
+let g:airline_powerline_fonts = 1
+
+" タブバーのカスタマイズを有効にする
+let g:airline#extensions#tabline#enabled = 1
+
+" タブバーの右領域を非表示にする
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_close_button = 0
+
+" j/kによる移動を速くする
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
+
+" 検索モードを開く
+nmap <Leader>f :CtrlP<CR>
