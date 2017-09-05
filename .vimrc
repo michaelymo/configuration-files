@@ -28,6 +28,16 @@ call neobundle#begin(expand('~/.vim/bundle/'))
      NeoBundle 'ConradIrwin/vim-bracketed-paste'
      " NERDTreeでタブ間のディレクトリを同期する
      NeoBundle 'jistr/vim-nerdtree-tabs'
+     " 編集した箇所に「＋」や「ー」を表示する
+     NeoBundle 'airblade/vim-gitgutter'
+     " ステータスバーやタブバーをカスタマイズする
+     NeoBundle 'vim-airline/vim-airline'
+     " hjの移動速度を早くする
+     NeoBundle 'rhysd/accelerated-jk'
+     " ファイルに変更が加わるとNERDTreeに変更を示すアイコンが追加される
+     NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+     " プロジェクト内のファイルやバッファ、履歴からファイルを検索する
+     NeoBundle 'ctrlpvim/ctrlp.vim'
 
 call neobundle#end()
 filetype plugin indent on
