@@ -15,3 +15,8 @@
 	graph = log --graph --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s' --date=format:'%Y-%m-%d %H:%M'
 	cg = config --global
 	diffs = diff --staged
+	unstage = reset
+	mvheadto = reset --soft
+	amend = commit --amend
+	last = log HEAD -1 --pretty=format:'%Cgreen%h'
+	oneline = log --oneline
