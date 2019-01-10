@@ -1,0 +1,17 @@
+[ghq]
+	root = ~/go/src
+[diff]
+	tool = vimdiff
+[core]
+	editor = vim
+[alias]
+	br = branch
+	ch = checkout
+	cm = commit
+	st = status
+	ss = stash save
+	sp = stash pop
+	gr = log --graph --pretty=format:'%Cgreen%a %Creset%cd %Cblue%cn %Cred%d %Creset%s' --date=format:'%Y-%m-%d %H:%M'
+	graph = log --graph --pretty=format:'%Cgreen%a %Creset%cd %Cblue%cn %Cred%d %Creset%s' --date=format:'%Y-%m-%d %H:%M'
+	cg = config --global
+	diffs = diff --staged
